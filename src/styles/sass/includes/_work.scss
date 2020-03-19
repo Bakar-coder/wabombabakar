@@ -1,0 +1,94 @@
+.work {
+  min-height: 100vh;
+  background: $dark;
+  padding: 7em 2em;
+  @include respond(tab-port) {
+    padding: 12em 2em;
+  }
+
+  @include respond(phone) {
+    padding: 8em 2em;
+  }
+
+  & .grid {
+    height: 100%;
+    width: 92%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    &__item {
+      width: 100%;
+      margin: 0.5rem;
+      height: 100%;
+      flex-basis: 40rem;
+      flex-grow: 1;
+      flex-shrink: 1;
+
+      & .image-container {
+        max-width: 100%;
+        height: 100%;
+        position: relative;
+
+        &:hover > .item-cover {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        & .item-cover {
+          opacity: 0;
+          visibility: hidden;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          background: rgba($color: $dark, $alpha: 0.8);
+          z-index: 2;
+          border-radius: 1rem;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          cursor: pointer;
+
+          & a {
+            color: $white;
+            border-radius: 3rem;
+            -webkit-border-radius: 3rem;
+            -moz-border-radius: 3rem;
+            -ms-border-radius: 3rem;
+            -o-border-radius: 3rem;
+          }
+          -webkit-border-radius: 1rem;
+          -moz-border-radius: 1rem;
+          -ms-border-radius: 1rem;
+          -o-border-radius: 1rem;
+          transition: all 0.5s ease-in-out;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          -ms-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+        }
+
+        & img {
+          width: 100%;
+          height: 100%;
+          object-position: top;
+          object-fit: cover;
+          border: 1px solid rgba($color: $white, $alpha: 0.5);
+
+          border-radius: 1rem;
+          -webkit-border-radius: 1rem;
+          -moz-border-radius: 1rem;
+          -ms-border-radius: 1rem;
+          -o-border-radius: 1rem;
+        }
+      }
+    }
+  }
+}

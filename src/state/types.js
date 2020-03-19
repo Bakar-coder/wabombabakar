@@ -1,0 +1,9 @@
+export const SET_ERROR = 'SET_ERROR';
+export const REMOVE_ERROR = 'REMOVE_ERROR';
+export const SET_TOKEN = 'SET_TOKEN';
+export const REMOVE_TOKEN = 'REMOVE_TOKEN';
+export const SET_ALERT = 'SET_ALERT';
+export const REMOVE_ALERT = 'REMOVE_ALERT';
+export const LOGIN_USER = 'LOGIN_USER';
+export const GET_USER = 'GET_USER';
+export const LOGOUT_USER = 'LOGOUT_USER';

@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  outline: none;
+}
+
+@import './mixins';
+@import './utils';
+@import './animations';
+@import './navbar';
+@import './header';
+@import './about';
+@import './contact';
+@import './work';
+@import './resume';
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-family: 'Poppins', sans-serif;
+  -ms-overflow-style: none;
+  height: 100%;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & ul {
+    list-style-type: none;
+  }
+
+  & a {
+    text-decoration: none;
+  }
+
+  & input,
+  & textarea {
+    font-size: 1.4rem;
+    font-family: inherit;
+  }
+}
+
+#root {
+  height: 100%;
+}

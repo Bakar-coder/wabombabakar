@@ -1,0 +1,223 @@
+.alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $white;
+  padding-top: 15vh;
+  padding-bottom: 1.2em;
+  text-align: center;
+
+  &__success {
+    color: $white;
+    background: $success;
+  }
+
+  &__danger {
+    color: $white;
+    background: $danger;
+  }
+  animation: drawIn 0.5s cubic-bezier(0.99, -0.03, 0, 1.4);
+  -webkit-animation: drawIn 0.5s cubic-bezier(0.99, -0.03, 0, 1.4);
+}
+
+.btn {
+  padding: 1.2rem 2.4rem;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.08);
+    -webkit-transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
+  }
+
+  &:active {
+    transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    -o-transform: scale(1.04);
+  }
+
+  &__sm {
+    padding: 1.2rem;
+  }
+
+  &__lg {
+    padding: 3rem 4rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  &__warning {
+    color: $black;
+    background: $warning;
+  }
+
+  &__primary {
+    color: $white;
+    background: $primary;
+  }
+
+  &__danger {
+    color: $white;
+    background: $danger;
+  }
+
+  &__outline {
+    background: transparent;
+    color: $primary;
+    border: 1px solid $primary;
+
+    & a {
+      color: $primary;
+    }
+
+    &:hover {
+      & a {
+        color: $white;
+      }
+      color: $white;
+      background: $primary;
+    }
+  }
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+}
+
+.text-info {
+  color: $warning;
+  font-size: 1.8rem;
+}
+
+.text-white {
+  color: rgba($color: $white, $alpha: 0.6);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.heading {
+  &--sub {
+    font-size: 2.4rem;
+    margin-bottom: 1.2rem;
+    color: $white;
+
+    & span {
+      color: $warning;
+    }
+  }
+}
+
+.fixed-bottom {
+  @include respond(tab-land) {
+    display: none;
+  }
+
+  .fixed_name {
+    position: fixed;
+    right: -1.3em;
+    top: 76%;
+    color: rgba($color: $white, $alpha: 0.5);
+    transform: rotateZ(90deg);
+    -webkit-transform: rotateZ(90deg);
+    -moz-transform: rotateZ(90deg);
+    -ms-transform: rotateZ(90deg);
+    -o-transform: rotateZ(90deg);
+  }
+
+  .fixed_icons {
+    position: fixed;
+    left: -2.4em;
+    top: 75%;
+    color: $dark;
+    font-weight: 700;
+    font-size: inherit;
+
+    a {
+      color: $dark;
+    }
+
+    & .social-icons .icon {
+      height: 3rem;
+      width: 3rem;
+      cursor: pointer;
+      margin: 0 0.5rem;
+      background: rgba($color: $white, $alpha: 0.5);
+      padding: 0.3rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+
+      &:hover {
+        color: $black;
+        background: $warning;
+      }
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+
+    & .social-icons .icon {
+      &:hover {
+        transform: rotateZ(270deg);
+        -webkit-transform: rotateZ(270deg);
+        -moz-transform: rotateZ(270deg);
+        -ms-transform: rotateZ(270deg);
+        -o-transform: rotateZ(270deg);
+      }
+      transition: transform 0.3s ease-in-out;
+      -webkit-transition: transform 0.3s ease-in-out;
+      -moz-transition: transform 0.3s ease-in-out;
+      -ms-transition: transform 0.3s ease-in-out;
+      -o-transition: transform 0.3s ease-in-out;
+    }
+
+    transform: rotateZ(90deg);
+    -webkit-transform: rotateZ(90deg);
+    -moz-transform: rotateZ(90deg);
+    -ms-transform: rotateZ(90deg);
+    -o-transform: rotateZ(90deg);
+
+    & .social-icons .icon {
+      transform: rotateZ(-90deg);
+      -webkit-transform: rotateZ(-90deg);
+      -moz-transform: rotateZ(-90deg);
+      -ms-transform: rotateZ(-90deg);
+      -o-transform: rotateZ(-90deg);
+    }
+  }
+
+  .line {
+    position: fixed;
+    top: 90%;
+    bottom: 0;
+    width: 1px;
+    height: 10%;
+    background: rgba($color: $white, $alpha: 0.5);
+    margin: 0 2em;
+
+    &__one {
+      position: fixed;
+      left: 1em;
+    }
+
+    &__two {
+      position: fixed;
+      right: 1em;
+    }
+  }
+}

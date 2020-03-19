@@ -1,0 +1,80 @@
+.content {
+  &__open {
+    animation: moveIn 1.8s cubic-bezier(0.53, 0.28, 0, 0.38);
+  }
+
+  &__closed {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes moveIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  40% {
+    opacity: 0;
+    visibility: visible;
+    transform: translateY(-1.2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInHeadingText {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  40% {
+    opacity: 0;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveInHeadingButtons {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  40% {
+    opacity: 0;
+    visibility: visible;
+    transform: translateY(1.5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drawIn {
+  0% {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}

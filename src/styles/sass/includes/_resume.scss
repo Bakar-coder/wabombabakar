@@ -1,0 +1,13 @@
+.resume {
+  width: 100vw;
+  min-height: 100vh;
+  background: $dark;
+  color: rgba($color: $white, $alpha: 0.5);
+  padding-top: 14em;
+  padding-bottom: 8em;
+  margin: auto;
+
+  &__get {
+    text-align: center;
+  }
+}
