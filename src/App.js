@@ -12,7 +12,7 @@ const App = ({ route, alert, errors }) => {
   const headTags = () => (
     <Helmet>
       <title>
-        Wabomba Bakar | Software Engineer / full-stack web developer base in
+        Wabomba Bakar | Software Engineer / full-stack web application development specialist base in
         Kampala, Uganda, East Africa | Web Developer | web designer | frontend
         developer | backend developer | UI designer
       </title>

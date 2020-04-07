@@ -22,7 +22,7 @@ export const getResume = (user, history) => async (dispatch, getState, api) => {
     const { data } = await api.post('/api/resume', user);
     if (data.success) {
       setAlert(data, dispatch);
-      setTimeout(() => history.push('/'), 5000);
+      setTimeout(() => history.push(`/resume/${data.token}`), 5000);
     }
   } catch (ex) {
     setError(ex, dispatch);
@@ -36,8 +36,9 @@ export const dowloadResume = (token, history) => async (
 ) => {
   try {
     const resetToken = { token };
-    const { data } = await api.post('/api/resume/download', resetToken);
-    if (data.success) return (window.location = data.url);
+    const res = await api.post('/api/resume/download', resetToken);
+    console.log(res);
+
   } catch (ex) {
     history.push('/resume');
     setError(ex, dispatch);
